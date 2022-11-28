@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../redux/hooks'
 import { getAllCategory, selectCategoryStatus } from '../redux/slices/categorySlice'
 import { getAllTools, selectAllTools, selectToolsByCategoryId, selectToolsStatus } from '../redux/slices/toolsSlice'
 import Spinner from '../components/UI/spinner/Spinner'
+import AppRouter from '../router/AppRouter'
 
 // import styles from './App.module.scss'
 
@@ -24,7 +25,12 @@ function App() {
   if (toolsStatus.fetchStatus === 'pending' || categoryStatus.fetchStatus === 'pending') {
     return <Spinner />
   }
-  return <div className="App">app</div>
+  return (
+    <>
+      <header>header</header>
+      <AppRouter />
+    </>
+  )
 }
 
 export default App
