@@ -73,3 +73,20 @@ export const selectToolsByCategoryId = (categoryId: number) =>
 export const selectPopularTools = createSelector(selectTools, ({ ids, entities }) =>
   ids.filter((id) => entities[id]?.popular === 1).map((id) => entities[id])
 )
+
+export const selectToolsBySearchQuery = createSelector(
+  (state: RootState) => state,
+  (state) => {
+    const {
+      tools: { entities, ids },
+      search,
+    } = state
+    return ids
+      .filter(
+        (id) =>
+          entities[id]!.toolName.toLowerCase().indexOf(search.inputValue.toLowerCase()) > -1 ||
+          entities[id]!.categoryName.toLowerCase().indexOf(search.inputValue.toLowerCase()) > -1
+      )
+      .map((id) => entities[id])
+  }
+)

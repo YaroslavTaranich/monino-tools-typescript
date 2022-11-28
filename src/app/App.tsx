@@ -5,6 +5,8 @@ import { getAllCategory, selectCategoryStatus } from '../redux/slices/categorySl
 import { getAllTools, selectAllTools, selectToolsByCategoryId, selectToolsStatus } from '../redux/slices/toolsSlice'
 import Spinner from '../components/UI/spinner/Spinner'
 import AppRouter from '../router/AppRouter'
+// import HidebleSliderButton from '../components/UI/spinner/HidebleSliderButton/HidebleSliderButton'
+import Header from '../components/UI/spinner/Header/Header'
 
 // import styles from './App.module.scss'
 
@@ -27,7 +29,7 @@ function App() {
   }
   return (
     <>
-      <header>header</header>
+      <Header />
       <AppRouter />
     </>
   )

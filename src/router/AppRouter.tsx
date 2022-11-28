@@ -7,6 +7,13 @@ import { selectAllTools } from '../redux/slices/toolsSlice'
 
 import styles from './transition.module.scss'
 
+export const menu = [
+  { path: '/', label: 'Каталог', component: <h1>Главная</h1> },
+  { path: '/rent-terms', label: 'Условия аренды', component: <h1>Условия аренды</h1> },
+  { path: '/delivery', label: 'Доставка', component: <h1>Доставка</h1> },
+  { path: '/contacts', label: 'Контакты', component: <h1>Контакты</h1> },
+]
+
 function AppRouter() {
   const tools = useAppSelector(selectAllTools.selectAll)
   const category = useAppSelector(selectAllCategory.selectAll)

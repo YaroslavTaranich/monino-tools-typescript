@@ -1,0 +1,138 @@
+.search-block {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 3.5rem;
+    color: #D1D3D4;
+}
+
+.search-block-input {
+    line-height: 100%;
+    font-size: 1.6rem;
+    width: 50.5rem;
+    border-radius: 1.75rem;
+    padding-left: 2rem;
+    outline: none;
+    border: 1px solid rgba(250, 235, 215, 1);
+    transition: all .5s ease;
+
+}
+
+.search-block-input:focus {
+    box-shadow: 0 0 0 2px #ecb600;
+}
+
+.search-block-input::placeholder {
+    font-size: 1.6rem;
+}
+
+.search-block-input::-webkit-search-cancel-button {
+    margin-right: 1rem;
+    font-size: 2rem;
+    display: none;
+}
+
+.search-btn-find {
+    width: 9rem;
+    text-align: center;
+    line-height: 3.6rem;
+    font-size: 1.6rem;
+    color: #D1D3D4;
+}
+
+.search-btn-find:hover {
+    color: #fff;
+}
+
+.search-span {
+    padding: 0 .3rem;
+    color: #eee;
+}
+
+.search-varinats {
+    z-index: 100;
+    position: absolute;
+    font-size: 1.6rem;
+
+    top: 3.6rem;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.search-varinats-item {
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    transition: all .4s;
+}
+
+.search-varinats-item:last-child {
+    border-bottom: none;
+}
+
+
+.search-varinats-item--link {
+    padding: .5rem 2rem;
+    color: #333;
+    width: 100%;
+    display: block;
+
+    &:hover,
+    &:focus {
+        background-color: #F37021;
+        outline: none;
+    }
+}
+
+
+@media (max-width:800px) {
+    .search-block {
+        width: 100%;
+        height: auto;
+        /* background-color:#58595B; */
+        height: 6rem;
+        border-radius: 3rem;
+        padding: 0;
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .search-block-input {
+        width: auto;
+        width: 100%;
+        height: 6rem;
+        border-radius: 3rem;
+
+    }
+
+    .search-btn-find {
+        width: 0%;
+    }
+
+    .search-span:first-child {
+        display: none;
+    }
+
+    .search-span:last-child {
+        position: absolute;
+        right: 1.5rem;
+        font-size: 3rem;
+        line-height: 6rem;
+        color: #F37021
+    }
+
+    .search-varinats {
+        top: 6rem;
+    }
+
+    .search-varinats-item--link {
+        padding: 1rem 0.7rem;
+    }
+
+}
