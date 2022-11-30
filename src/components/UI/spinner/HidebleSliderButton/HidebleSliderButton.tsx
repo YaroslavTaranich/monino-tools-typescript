@@ -14,7 +14,6 @@ const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, tra
   const [open, setOpen] = useState(false)
 
   const keyHandler = (e: KeyboardEvent) => {
-    console.log(e.key)
     if (e.key === 'Escape') {
       setOpen(false)
     }
