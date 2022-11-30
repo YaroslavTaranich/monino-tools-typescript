@@ -37,6 +37,9 @@ function AppRouter() {
       }}
     >
       <Routes location={displayLocation}>
+        {menu.map((item) => (
+          <Route path={item.path} element={item.component} />
+        ))}
         {category.map((item) => (
           <Route path={item.url} key={item.url} element={<div>{item.name}</div>} />
         ))}
