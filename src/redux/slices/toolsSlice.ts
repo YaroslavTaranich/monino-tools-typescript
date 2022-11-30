@@ -90,3 +90,28 @@ export const selectToolsBySearchQuery = createSelector(
       .map((id) => entities[id])
   }
 )
+
+export const selectToolsURL = createSelector(
+  (state: RootState) => state,
+  (state) => {
+    const {
+      category,
+      tools: { entities, ids },
+    } = state
+    return Object.fromEntries(
+      ids.map((id) => [id, `/${category.entities[entities[id]!.categoryId]!.url}/${entities[id]?.toolUrl}`])
+    )
+  }
+)
+
+export const selectToolURLById = (toolId: number) =>
+  createSelector(
+    (state: RootState) => state,
+    (state) => {
+      const {
+        category,
+        tools: { entities },
+      } = state
+      return `/${category.entities[entities[toolId]!.categoryId]!.url}/${entities[toolId]?.toolUrl}`
+    }
+  )

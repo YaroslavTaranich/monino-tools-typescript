@@ -9,9 +9,9 @@ import styles from './transition.module.scss'
 
 export const menu = [
   { path: '/', label: 'Каталог', component: <h1>Главная</h1> },
-  { path: '/rent-terms', label: 'Условия аренды', component: <h1>Условия аренды</h1> },
-  { path: '/delivery', label: 'Доставка', component: <h1>Доставка</h1> },
-  { path: '/contacts', label: 'Контакты', component: <h1>Контакты</h1> },
+  { path: 'rent-terms', label: 'Условия аренды', component: <h1>Условия аренды</h1> },
+  { path: 'delivery', label: 'Доставка', component: <h1>Доставка</h1> },
+  { path: 'contacts', label: 'Контакты', component: <h1>Контакты</h1> },
 ]
 
 function AppRouter() {
@@ -28,7 +28,7 @@ function AppRouter() {
 
   return (
     <main
-      className={styles.transitionStage}
+      className={styles[transitionStage]}
       onAnimationEnd={() => {
         if (transitionStage === 'fadeOut') {
           setTransistionStage('fadeIn')
@@ -37,15 +37,25 @@ function AppRouter() {
       }}
     >
       <Routes location={displayLocation}>
-        {menu.map((item) => (
-          <Route path={item.path} element={item.component} />
-        ))}
-        {category.map((item) => (
-          <Route path={item.url} key={item.url} element={<div>{item.name}</div>} />
-        ))}
-        {tools.map((item) => (
-          <Route path={item.toolUrl} key={item.toolUrl} element={<div>{item.toolName}</div>} />
-        ))}
+        <Route path="/">
+          {menu.map((item) => {
+            if (item.path === '/') {
+              return <Route index element={item.component} key={item.path} />
+            }
+            return <Route path={item.path} element={item.component} key={item.path} />
+          })}
+          {category.map((item) => (
+            <Route path={item.url} key={item.url}>
+              <Route index element={<div>{item.name}</div>} />
+              {tools.map((tool) => {
+                if (tool.categoryId === item.id) {
+                  return <Route path={tool.toolUrl} key={tool.toolUrl} element={<div>{tool.toolName}</div>} />
+                }
+                return null
+              })}
+            </Route>
+          ))}
+        </Route>
       </Routes>
     </main>
   )
