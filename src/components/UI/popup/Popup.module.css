@@ -22,19 +22,19 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--black-dark-shadow);
   z-index: 2;
   cursor: pointer;
   backdrop-filter: blur(4px);
 }
 
 .content {
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--button-color-active);
   box-sizing: border-box;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px var(--black-medium-shadow);
   border-radius: 16px;
-  overflow: auto;
-  background-color: #f8f8f8;
+  overflow: visible;
+  background-color: var(--bg-color);
   z-index: 3;
   padding: 30px 10px 10px;
   min-width: 400px;
@@ -46,6 +46,6 @@
 
 .close {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: -12px;
+  right: -12px;
 }

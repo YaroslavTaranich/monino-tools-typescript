@@ -17,9 +17,9 @@ const Header = () => (
       <LogoHeader />
       {/* кнопки-слайдеры для элементов навигации  */}
       <nav className={styles.header__nav}>
-        <HidebleSliderButton icon={faBars}>
-          {/* меню для десктопов */}
-          <DesktopMenu />
+        <HidebleSliderButton icon={faSearch} transitionX={10}>
+          {/* поиск для десктопов */}
+          <SearchInput />
         </HidebleSliderButton>
 
         <HidebleSliderButton icon={faPhone} transitionX={5}>
@@ -27,9 +27,9 @@ const Header = () => (
           <PhoneLinkDesktop />
         </HidebleSliderButton>
 
-        <HidebleSliderButton icon={faSearch} transitionX={10}>
-          {/* поиск для десктопов */}
-          <SearchInput />
+        <HidebleSliderButton icon={faBars}>
+          {/* меню для десктопов */}
+          <DesktopMenu />
         </HidebleSliderButton>
       </nav>
 

@@ -1,5 +1,5 @@
 .header {
-    background-color: rgb(251, 244, 235);
+    background-color: var(--bg-header);
     margin-bottom: 1rem;
     position: relative;
     width: 100%;
@@ -15,7 +15,7 @@
         max-width: 120rem;
         width: 100%;
         margin: 0 auto;
-        color: #333;
+        color: var(--text-color-primary);
 
         &-mobile {
             display: none;

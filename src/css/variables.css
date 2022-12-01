@@ -1,0 +1,21 @@
+:root {
+  /* colors */
+  --text-color-primary: #333;
+  --text-color-link: #d1d3d4;
+  --text-color-secondary: #666;
+  --text-color-light: #eee;
+
+  --bg-header: rgb(251, 244, 235);
+  --bg-color: #f8f8f8;
+
+  --modile-menu-bg: #58595bd7;
+
+  --button-bg: #ecb600;
+  --button-color: #58595b;
+  --button-bg-active: #58595b;
+  --button-color-active: #f37021;
+
+  --black-light-shadow: rgba(0, 0, 0, 0.05);
+  --black-medium-shadow: rgba(0, 0, 0, 0.25);
+  --black-dark-shadow: rgba(0, 0, 0, 0.5);
+}

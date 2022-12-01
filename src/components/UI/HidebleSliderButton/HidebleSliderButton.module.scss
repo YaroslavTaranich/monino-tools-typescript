@@ -1,10 +1,10 @@
 .wrapper {
-    background-color: #58595B;
-    color: #D1D3D4;
+    background-color: var(--button-bg-active);
+    color: color(--text-color-light);
     display: flex;
     justify-content: flex-end;
     border-radius: 1.75rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.044);
+    box-shadow: 0 1rem 2rem var(--black-light-shadow);
     position: absolute;
     right: 20px;
     top: 50%;
@@ -27,6 +27,7 @@
 }
 
 .open {
+    box-shadow: 0 1rem 2rem var(--black-medium-shadow);
 
     .child {
         width: 60rem;
