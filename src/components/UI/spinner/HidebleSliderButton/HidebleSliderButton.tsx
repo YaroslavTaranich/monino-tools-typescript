@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { FC, ReactElement, useEffect, useState } from 'react'
 
+import ButtonIconRound from '../../BottonIconRound/ButtonIconRound'
+
 import styles from './HidebleSliderButton.module.scss'
 
 interface HidebleSliderButtonProps {
@@ -38,9 +40,9 @@ const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, tra
       }
     >
       <div className={styles.child}>{open ? children : null}</div>
-      <button className={styles.button} type="button" onClick={() => setOpen((prev) => !prev)}>
+      <ButtonIconRound onClick={() => setOpen((prev) => !prev)}>
         <FontAwesomeIcon icon={open ? faClose : icon} />
-      </button>
+      </ButtonIconRound>
     </div>
   )
 }
