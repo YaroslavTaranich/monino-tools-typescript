@@ -2,9 +2,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { ReactElement } from 'react'
 
-import { useMount } from './useMount'
+import { useMount } from '../../../hooks/useMount'
+
 import Portal from './Portal'
 import Layout from './Layout'
+import { ANIMATION_TIME } from './const'
 
 interface PopupProps {
   open: boolean
@@ -13,7 +15,7 @@ interface PopupProps {
 }
 
 function Popup({ open, onClose, children }: PopupProps) {
-  const { mounted } = useMount({ opened: open })
+  const mounted = useMount(open, ANIMATION_TIME)
 
   if (!mounted) return null
 
