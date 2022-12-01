@@ -2,8 +2,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { ReactElement, useEffect, useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import { faClose } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import styles from './Popup.module.scss'
+import ButtonIconRound from '../BottonIconRound/ButtonIconRound'
+
+import styles from './Popup.module.css'
 import animationStyles from './animation.module.css'
 import { ANIMATION_TIME } from './const'
 
@@ -21,13 +25,13 @@ const contentAnimation = {
   exitActive: animationStyles.contentExitActive,
 }
 
-interface PopupProps {
+interface LayoutProps {
   open: boolean
   onClose: () => void
   children: ReactElement | ReactElement[]
 }
 
-function Layout({ open, onClose, children }: PopupProps) {
+function Layout({ open, onClose, children }: LayoutProps) {
   const overlayRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -35,6 +39,11 @@ function Layout({ open, onClose, children }: PopupProps) {
 
   useEffect(() => {
     setAnimationIn(open)
+    if (open) {
+      document.getElementById('root')?.setAttribute('inert', 'true')
+    } else {
+      document.getElementById('root')?.removeAttribute('inert')
+    }
   }, [open])
 
   return (
@@ -58,6 +67,9 @@ function Layout({ open, onClose, children }: PopupProps) {
         classNames={contentAnimation}
       >
         <div ref={contentRef} className={styles.content}>
+          <ButtonIconRound onClick={onClose} className={styles.close}>
+            <FontAwesomeIcon icon={faClose} />
+          </ButtonIconRound>
           {children}
         </div>
       </CSSTransition>

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { ReactElement } from 'react'
 
-import { useMount } from './hooks/useMount'
+import { useMount } from './useMount'
 import Portal from './Portal'
 import Layout from './Layout'
 
