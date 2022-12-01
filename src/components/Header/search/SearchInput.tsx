@@ -27,6 +27,9 @@ const SearchInput = () => {
         inputRef.current.focus()
       }
     }, 200)
+    return () => {
+      dispatch(setSearchInput(''))
+    }
   }, [])
 
   return (
