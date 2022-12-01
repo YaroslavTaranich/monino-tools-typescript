@@ -1,8 +1,10 @@
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import MenuLinks from './MenuLinks'
+import { menu } from '../../../router/AppRouter'
+
 import styles from './menu.module.scss'
 
 function MobileMenu() {
@@ -20,7 +22,13 @@ function MobileMenu() {
       />
 
       <ul className={listClassNames.map((name) => styles[name]).join(' ')}>
-        <MenuLinks menuType="mobile" />
+        {menu.map((link) => (
+          <li key={link.path}>
+            <Link to={link.path} className={styles['mobile-menu-item']}>
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   )
