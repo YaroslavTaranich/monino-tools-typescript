@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { FC, ReactElement, useEffect, useState } from 'react'
 
-import ButtonIconRound from '../../BottonIconRound/ButtonIconRound'
+import ButtonIconRound from '../BottonIconRound/ButtonIconRound'
 
 import styles from './HidebleSliderButton.module.scss'
 

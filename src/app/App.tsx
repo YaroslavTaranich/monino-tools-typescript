@@ -6,7 +6,7 @@ import { getAllTools, selectToolsStatus } from '../redux/slices/toolsSlice'
 import Spinner from '../components/UI/spinner/Spinner'
 import AppRouter from '../router/AppRouter'
 // import HidebleSliderButton from '../components/UI/spinner/HidebleSliderButton/HidebleSliderButton'
-import Header from '../components/UI/spinner/Header/Header'
+import Header from '../components/Header/Header'
 
 // import styles from './App.module.scss'
 

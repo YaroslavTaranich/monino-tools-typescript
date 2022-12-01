@@ -1,6 +1,6 @@
 import { faPhone, faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
 
-import HidebleSliderButton from '../HidebleSliderButton/HidebleSliderButton'
+import HidebleSliderButton from '../UI/HidebleSliderButton/HidebleSliderButton'
 
 import SearchInput from './search/SearchInput'
 import DesktopMenu from './menu/DesktopMenu'

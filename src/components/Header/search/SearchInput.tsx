@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-import { selectSearchInput, setSearchInput } from '../../../../../redux/slices/searchSlice'
-import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks'
+import { selectSearchInput, setSearchInput } from '../../../redux/slices/searchSlice'
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
 
 import SearchVariants from './SearchVariants'
 import styles from './search.module.scss'

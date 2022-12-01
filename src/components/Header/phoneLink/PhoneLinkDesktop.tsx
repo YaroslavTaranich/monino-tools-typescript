@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 // import CallMeBackForm from '../../callMeBackForm/callMeBackForm'
-import Popup from '../../../popup/Popup'
+import Popup from '../../UI/popup/Popup'
 
 import styles from './PnoneLink.module.scss'
 

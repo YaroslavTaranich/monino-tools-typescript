@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks'
-import { selectSearchInput, setSearchInput } from '../../../../../redux/slices/searchSlice'
-import { selectToolsBySearchQuery, selectToolsURL } from '../../../../../redux/slices/toolsSlice'
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
+import { selectSearchInput, setSearchInput } from '../../../redux/slices/searchSlice'
+import { selectToolsBySearchQuery, selectToolsURL } from '../../../redux/slices/toolsSlice'
 
 import styles from './search.module.scss'
 
@@ -12,7 +12,7 @@ function SearchVariants() {
   const searchInputValue = useAppSelector(selectSearchInput)
   const dispatch = useAppDispatch()
 
-  if (searchInputValue === '') return null
+  if (searchInputValue === '' || foundTools.length === 0) return null
 
   return (
     <ul className={styles['search-varinats']}>
