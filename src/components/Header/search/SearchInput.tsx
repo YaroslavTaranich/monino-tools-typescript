@@ -6,8 +6,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { selectSearchInput, setSearchInput } from '../../../redux/slices/searchSlice'
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
 
-import SearchVariants from './SearchVariants'
 import styles from './search.module.scss'
+import SearchDropdown from './SearchDropdown/SearchDropdown'
 
 const SearchInput = () => {
   const dispatch = useAppDispatch()
@@ -34,14 +34,12 @@ const SearchInput = () => {
       <div className={styles['search-block']}>
         <input
           ref={inputRef}
-          // id="search-input"
           type="search"
           placeholder="Поиск"
           className={styles['search-block-input']}
           value={inputValue}
           onChange={(e) => dispatch(setSearchInput(e.target.value))}
           onKeyDown={handleKeyDown}
-          // ref={inputRef}
           autoComplete="off"
         />
 
@@ -53,7 +51,7 @@ const SearchInput = () => {
         </Link>
       </div>
 
-      <SearchVariants />
+      <SearchDropdown />
     </>
   )
 }

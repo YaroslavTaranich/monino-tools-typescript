@@ -128,11 +128,14 @@
     }
 
     .search-varinats {
-        top: 6rem;
+        top: 6.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
     }
 
     .search-varinats-item--link {
-        padding: 1rem 0.7rem;
+        padding: 1.5rem 0.7rem;
     }
 
 }
