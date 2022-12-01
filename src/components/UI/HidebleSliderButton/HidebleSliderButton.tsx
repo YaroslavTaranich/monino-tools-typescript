@@ -17,7 +17,7 @@ interface HidebleSliderButtonProps {
 const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, transitionX, onClose }) => {
   const [open, setOpen] = useState(false)
 
-  const mount = useMount(open, 400)
+  const mount = useMount(open, 1000)
 
   const keyHandler = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
