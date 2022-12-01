@@ -37,6 +37,12 @@ function Layout({ open, onClose, children }: LayoutProps) {
 
   const [animationIn, setAnimationIn] = useState(false)
 
+  const keyHandler = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      onClose()
+    }
+  }
+
   useEffect(() => {
     setAnimationIn(open)
     if (open) {
@@ -45,6 +51,13 @@ function Layout({ open, onClose, children }: LayoutProps) {
       document.getElementById('root')?.removeAttribute('inert')
     }
   }, [open])
+
+  useEffect(() => {
+    window.addEventListener('keydown', keyHandler)
+    return () => {
+      window.addEventListener('keydown', keyHandler)
+    }
+  }, [])
 
   return (
     <div className={styles.container}>

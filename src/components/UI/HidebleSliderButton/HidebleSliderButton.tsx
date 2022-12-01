@@ -39,7 +39,7 @@ const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, tra
           : { transform: `translate(-${transitionX}rem, -50%)`, zIndex: 0 }
       }
     >
-      <div className={styles.child}>{open ? children : null}</div>
+      <div className={styles.child}>{children}</div>
       <ButtonIconRound onClick={() => setOpen((prev) => !prev)}>
         <FontAwesomeIcon icon={open ? faClose : icon} />
       </ButtonIconRound>

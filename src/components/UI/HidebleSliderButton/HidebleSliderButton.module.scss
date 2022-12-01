@@ -15,18 +15,16 @@
         scale: 0;
         width: 0;
         height: 0;
-
+        visibility: hidden;
         display: flex;
         align-items: center;
         transition:
-            scale .2s,
-            width .4s,
-            height .4s,
+            scale .1s,
+            width .2s .1s,
+            height .2s .1s,
             visibility .2s .2s,
     }
 }
-
-
 
 .open {
 
