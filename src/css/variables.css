@@ -1,9 +1,11 @@
 :root {
   /* colors */
-  --text-color-primary: #333;
+
   --text-color-link: #d1d3d4;
-  --text-color-secondary: #666;
   --text-color-light: #eee;
+  --text-color-label: #999;
+  --text-color-secondary: #666;
+  --text-color-primary: #333;
 
   --bg-header: rgb(251, 244, 235);
   --bg-color: #f8f8f8;

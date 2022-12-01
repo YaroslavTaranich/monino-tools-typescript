@@ -24,3 +24,8 @@ a {
   text-decoration: none;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: white;
+  transition: background-color 5000s ease-in-out 1110s;
+}
