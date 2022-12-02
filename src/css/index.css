@@ -29,3 +29,15 @@ textarea:-webkit-autofill {
   background-color: white;
   transition: background-color 5000s ease-in-out 1110s;
 }
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
