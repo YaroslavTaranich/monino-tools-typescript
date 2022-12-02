@@ -10,11 +10,12 @@ import styles from './HidebleSliderButton.module.scss'
 interface HidebleSliderButtonProps {
   icon: IconDefinition
   children: ReactElement | ReactElement[]
+  ariaName: string
   transitionX?: number
   onClose?: () => void
 }
 
-const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, transitionX, onClose }) => {
+const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, ariaName, transitionX, onClose }) => {
   const [open, setOpen] = useState(false)
 
   const mount = useMount(open, 1000)
@@ -51,7 +52,7 @@ const HidebleSliderButton: FC<HidebleSliderButtonProps> = ({ icon, children, tra
       }
     >
       <div className={styles.child}>{mount ? children : null}</div>
-      <ButtonIconRound onClick={buttonHandler}>
+      <ButtonIconRound onClick={buttonHandler} aria-label={open ? `Закрыть ${ariaName}` : `Открыть ${ariaName}`}>
         <FontAwesomeIcon icon={open ? faClose : icon} />
       </ButtonIconRound>
     </div>

@@ -42,10 +42,18 @@
     line-height: 3.6rem;
     font-size: 1.6rem;
     color: var(--text-color-link);
-}
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
 
-.search-btn-find:hover {
-    color: #fff;
+    &:hover span {
+        color: #fff;
+    }
+
+    &:focus {
+        outline: 2px solid var(--button-bg);
+    }
 }
 
 .search-span {

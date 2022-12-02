@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -10,9 +10,10 @@ import styles from './search.module.scss'
 import SearchDropdown from './SearchDropdown/SearchDropdown'
 
 const SearchInput = () => {
+  const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const inputValue = useAppSelector(selectSearchInput)
-  const findButtonRef = useRef<HTMLAnchorElement>(null)
+  const findButtonRef = useRef<HTMLButtonElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -45,13 +46,23 @@ const SearchInput = () => {
           onKeyDown={handleKeyDown}
           autoComplete="off"
         />
-
-        <Link ref={findButtonRef} className={styles['search-btn-find']} to="/search-result">
+        <button
+          ref={findButtonRef}
+          type="button"
+          onClick={() => navigate('/search-result')}
+          className={styles['search-btn-find']}
+        >
           <span className={styles['search-span']}>Найти! </span>
           <span className={styles['search-span']}>
             <FontAwesomeIcon icon={faSearch} />
           </span>
-        </Link>
+        </button>
+        {/* <Link ref={findButtonRef} className={styles['search-btn-find']} to="/search-result">
+          <span className={styles['search-span']}>Найти! </span>
+          <span className={styles['search-span']}>
+            <FontAwesomeIcon icon={faSearch} />
+          </span>
+        </Link> */}
       </div>
 
       <SearchDropdown />

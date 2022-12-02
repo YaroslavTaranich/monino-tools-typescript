@@ -80,7 +80,7 @@ function Layout({ open, onClose, children }: LayoutProps) {
         classNames={contentAnimation}
       >
         <div ref={contentRef} className={styles.content}>
-          <ButtonIconRound onClick={onClose} className={styles.close}>
+          <ButtonIconRound onClick={onClose} className={styles.close} aria-label="Закрыть окно">
             <FontAwesomeIcon icon={faClose} />
           </ButtonIconRound>
           {children}

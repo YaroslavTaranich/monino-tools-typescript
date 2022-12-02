@@ -17,17 +17,17 @@ const Header = () => (
       <LogoHeader />
       {/* кнопки-слайдеры для элементов навигации  */}
       <nav className={styles.header__nav}>
-        <HidebleSliderButton icon={faSearch} transitionX={10}>
+        <HidebleSliderButton icon={faSearch} transitionX={10} ariaName="Поиск">
           {/* поиск для десктопов */}
           <SearchInput />
         </HidebleSliderButton>
 
-        <HidebleSliderButton icon={faPhone} transitionX={5}>
+        <HidebleSliderButton icon={faPhone} transitionX={5} ariaName="Телефон">
           {/* сслыка на телефон и кнопка перезвонить */}
           <PhoneLinkDesktop />
         </HidebleSliderButton>
 
-        <HidebleSliderButton icon={faBars}>
+        <HidebleSliderButton icon={faBars} ariaName="Меню">
           {/* меню для десктопов */}
           <DesktopMenu />
         </HidebleSliderButton>
