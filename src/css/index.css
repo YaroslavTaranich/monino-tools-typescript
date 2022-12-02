@@ -24,6 +24,12 @@ a {
   text-decoration: none;
 }
 
+a:link,
+a:focus,
+a:visited {
+  color: var(--text-color-primary);
+}
+
 input:-webkit-autofill,
 textarea:-webkit-autofill {
   background-color: white;
@@ -41,3 +47,4 @@ textarea:-webkit-autofill {
     font-size: 50%;
   }
 }
+
