@@ -2,7 +2,7 @@
 import { createAsyncThunk, createEntityAdapter, createSelector, createSlice, EntityState } from '@reduxjs/toolkit'
 
 import { Tool } from '../../models/tools'
-import { getTools } from '../../services/API'
+import { getTools } from '../../services/TESTAPI'
 import type { RootState } from '../store'
 
 const toolAdapter = createEntityAdapter<Tool>({ selectId: (tool) => tool.id })
