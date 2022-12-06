@@ -2,7 +2,7 @@
 import { createAsyncThunk, createEntityAdapter, createSelector, createSlice, EntityState } from '@reduxjs/toolkit'
 
 import { Category } from '../../models/category'
-import { getCategory } from '../../services/TESTAPI'
+import { getCategory } from '../../services/API'
 import type { RootState } from '../store'
 
 const categoryAdapter = createEntityAdapter<Category>({ selectId: (category) => category.id })
