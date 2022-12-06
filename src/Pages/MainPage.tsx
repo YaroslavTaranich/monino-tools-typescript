@@ -1,10 +1,11 @@
 import AllCategoresList from '../components/AllCategoresList/AllCategoresList'
 import Container from '../components/Container/Container'
+import PageTitle from '../components/UI/PageTitle/PageTitle'
 
 function MainPage() {
   return (
     <Container>
-      <h1>Main</h1>
+      <PageTitle>Строительный инструмент в аренду</PageTitle>
       <AllCategoresList />
     </Container>
   )
