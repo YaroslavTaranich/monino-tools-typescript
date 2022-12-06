@@ -21,6 +21,10 @@
   --black-medium-shadow: rgba(0, 0, 0, 0.25);
   --black-dark-shadow: rgba(0, 0, 0, 0.5);
 
+  --white-light-shadow: rgba(255, 255, 255, 0.05);
+  --white-medium-shadow: rgba(255, 255, 255, 0.25);
+  --white-dark-shadow: rgba(255, 255, 255, 0.5);
+
   --tabs-bg: #f9f6f3;
   --tabs-border: rgba(250, 235, 215, 1);
   --tabs-active: #f37021;
