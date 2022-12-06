@@ -29,4 +29,7 @@
   --tabs-border: rgba(250, 235, 215, 1);
   --tabs-active: #f37021;
   --tabs-border-hover: #f3722183;
+
+  --card-bg: rgba(250, 235, 215, 0.582);
+  --card-bg-active: rgba(250, 235, 215, 0.979);
 }
