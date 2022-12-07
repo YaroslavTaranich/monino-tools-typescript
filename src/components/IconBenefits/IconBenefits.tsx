@@ -36,7 +36,7 @@ function IconBenefits() {
       <h3 className={styles.title}>Аренда инструмента - это удобно!</h3>
       <ul className={styles.list}>
         {cards.map((card) => (
-          <IconBenefitsCard title={card.title} text={card.text} icon={card.icon} link={card.link} />
+          <IconBenefitsCard key={card.title} title={card.title} text={card.text} icon={card.icon} link={card.link} />
         ))}
       </ul>
     </section>
