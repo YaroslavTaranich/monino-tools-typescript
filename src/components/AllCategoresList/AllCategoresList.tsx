@@ -11,7 +11,7 @@ function AllCategoresList() {
     <section className={styles.categores}>
       <ul className={styles.list}>
         {categores.map((category) => (
-          <AllCategoresListItem category={category} />
+          <AllCategoresListItem key={category.id} category={category} />
         ))}
       </ul>
     </section>
