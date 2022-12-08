@@ -7,6 +7,7 @@ import PageTitle from '../components/UI/PageTitle/PageTitle'
 import { Tool } from '../models/tools'
 import Specification from '../components/UI/Specification/Specification'
 import Tabs from '../components/UI/Tabs/Tabs'
+import ToolOrder from '../components/ToolOrder/ToolOrder'
 
 interface ToolPageProps {
   tool: Tool
@@ -24,6 +25,7 @@ function ToolPage({ tool }: ToolPageProps) {
   return (
     <Container>
       <PageTitle>{tool.toolName}</PageTitle>
+      <ToolOrder tool={tool} />
       <Tabs tabs={tabs} />
       <IconBenefits />
     </Container>
