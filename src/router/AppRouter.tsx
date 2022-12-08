@@ -64,7 +64,7 @@ function AppRouter() {
               {/* Вложеные пути для инструмента в категорях */}
               {tools.map((tool) => {
                 if (tool.categoryId === category.id) {
-                  return <Route path={tool.toolUrl} key={tool.toolUrl} element={<ToolPage />} />
+                  return <Route path={tool.toolUrl} key={tool.toolUrl} element={<ToolPage tool={tool} />} />
                 }
                 return null
               })}

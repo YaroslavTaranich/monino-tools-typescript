@@ -1,9 +1,31 @@
-import Container from '../components/Container/Container'
+import { useMemo } from 'react'
+import { faGear, faMessage } from '@fortawesome/free-solid-svg-icons'
 
-function ToolPage() {
+import Container from '../components/Container/Container'
+import IconBenefits from '../components/IconBenefits/IconBenefits'
+import PageTitle from '../components/UI/PageTitle/PageTitle'
+import { Tool } from '../models/tools'
+import Specification from '../components/UI/Specification/Specification'
+import Tabs from '../components/UI/Tabs/Tabs'
+
+interface ToolPageProps {
+  tool: Tool
+}
+
+function ToolPage({ tool }: ToolPageProps) {
+  const tabs = useMemo(
+    () => [
+      { label: 'Характеристики', content: <Specification data={tool.specification} />, icon: faGear },
+      { label: 'Описание', content: tool.toolDiscription, icon: faMessage },
+    ],
+    [tool]
+  )
+
   return (
     <Container>
-      <h1>ToolPage</h1>
+      <PageTitle>{tool.toolName}</PageTitle>
+      <Tabs tabs={tabs} />
+      <IconBenefits />
     </Container>
   )
 }

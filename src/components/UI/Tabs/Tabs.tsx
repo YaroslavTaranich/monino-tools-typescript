@@ -5,7 +5,7 @@ import { ReactElement, useState } from 'react'
 import styles from './Tabs.module.scss'
 
 interface TabsProps {
-  tabs: { label: string; content: ReactElement; icon?: IconDefinition }[]
+  tabs: { label: string; content: ReactElement | string; icon?: IconDefinition }[]
 }
 
 const activeButtonClasses = [styles.button, styles['button--active']]
@@ -22,6 +22,7 @@ function Tabs({ tabs }: TabsProps) {
             type="button"
             className={selected === index ? activeButtonClasses.join(' ') : styles.button}
             onClick={() => setSelected(index)}
+            aria-label={tab.label}
           >
             {tab.icon && <FontAwesomeIcon className={styles.icon} icon={tab.icon} />}
             <span className={styles.label}>{tab.label}</span>
@@ -31,7 +32,7 @@ function Tabs({ tabs }: TabsProps) {
       <div className={styles.content}>
         {tabs.map((tab, index) => (
           <div className={selected === index ? activeContentItemClasses.join(' ') : styles.content__item}>
-            {tab.content}
+            {typeof tab.content === 'string' ? <p className={styles.content__text}>{tab.content}</p> : tab.content}
           </div>
         ))}
       </div>
