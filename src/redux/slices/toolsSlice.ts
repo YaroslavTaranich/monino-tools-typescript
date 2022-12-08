@@ -66,8 +66,10 @@ export const selectToolsStatus = createSelector(selectTools, (tools) => {
 export const selectAllTools = toolAdapter.getSelectors<RootState>((state) => state.tools)
 
 export const selectToolsByCategoryId = (categoryId: number) =>
-  createSelector(selectTools, ({ ids, entities }) =>
-    ids.filter((id) => entities[id]?.categoryId === categoryId).map((id) => entities[id])
+  createSelector(
+    selectTools,
+    ({ ids, entities }) =>
+      ids.filter((id) => entities[id]?.categoryId === categoryId).map((id) => entities[id]) as Tool[]
   )
 
 export const selectPopularTools = createSelector(selectTools, ({ ids, entities }) =>

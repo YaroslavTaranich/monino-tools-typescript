@@ -59,7 +59,7 @@ function AppRouter() {
           {/* пути для категорий */}
           {categores.map((category) => (
             <Route path={category.url} key={category.url}>
-              <Route index element={<CategoryPage />} />
+              <Route index element={<CategoryPage category={category} />} />
 
               {/* Вложеные пути для инструмента в категорях */}
               {tools.map((tool) => {
