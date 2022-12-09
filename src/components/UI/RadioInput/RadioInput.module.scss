@@ -27,7 +27,7 @@
 
     &__label {
         font-size: 2rem;
-        padding-right: 5rem;
+        padding-left: 5rem;
 
         &::before {
             content: "";
@@ -38,7 +38,7 @@
             height: 2.5rem;
             border-radius: 50%;
             border: 2px solid var(--button-bg);
-            transform: translate(-4rem, -.4rem);
+            transform: translate(1rem, -.4rem);
 
         }
     }
