@@ -47,8 +47,10 @@ function Layout({ open, onClose, children }: LayoutProps) {
     setAnimationIn(open)
     if (open) {
       document.getElementById('root')?.setAttribute('inert', 'true')
+      document.body.style.overflow = 'hidden'
     } else {
       document.getElementById('root')?.removeAttribute('inert')
+      document.body.style.overflow = ''
     }
   }, [open])
 
