@@ -8,13 +8,14 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children: string
   variant?: 'primary' | 'secondary' | 'menu'
   icon?: IconDefinition
+  submit?: boolean
 }
 
-function Button({ variant, icon, ...props }: ButtonProps) {
+function Button({ variant, icon, submit, ...props }: ButtonProps) {
   const classNames = [styles.button, styles[variant!]]
 
   return (
-    <button className={classNames.join(' ')} type="button" {...props}>
+    <button className={classNames.join(' ')} type={submit ? 'submit' : 'button'} {...props}>
       {icon && <FontAwesomeIcon icon={icon} className={styles.icon} />}
       {props.children}
     </button>
@@ -24,6 +25,7 @@ function Button({ variant, icon, ...props }: ButtonProps) {
 Button.defaultProps = {
   variant: 'primary',
   icon: undefined,
+  submit: false,
 }
 
 export default Button
