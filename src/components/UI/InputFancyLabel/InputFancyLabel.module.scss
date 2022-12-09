@@ -1,7 +1,12 @@
 .wrapper {
     width: 100%;
     position: relative;
-    margin-top: 4rem;
+    margin-top: 1rem;
+    transition: all .2s;
+
+    &:has(.input:not(:placeholder-shown)) {
+        margin-top: 4rem;
+    }
 }
 
 .label {
@@ -16,8 +21,6 @@
     color: var(--text-color-label);
     letter-spacing: .15rem;
     cursor: pointer;
-
-
 }
 
 .input {
@@ -49,4 +52,11 @@
         border: 1px solid var(--button-bg);
         box-shadow: 0 0 0 1px var(--button-bg), 0rem 1rem 1rem var(--black-light-shadow);
     }
+}
+
+.error {
+    color: var(--error);
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
 }
