@@ -19,6 +19,7 @@ function Tabs({ tabs }: TabsProps) {
       <div className={styles.controls}>
         {tabs.map((tab, index) => (
           <button
+            key={tab.label}
             type="button"
             className={selected === index ? activeButtonClasses.join(' ') : styles.button}
             onClick={() => setSelected(index)}
@@ -31,7 +32,10 @@ function Tabs({ tabs }: TabsProps) {
       </div>
       <div className={styles.content}>
         {tabs.map((tab, index) => (
-          <div className={selected === index ? activeContentItemClasses.join(' ') : styles.content__item}>
+          <div
+            key={tab.label}
+            className={selected === index ? activeContentItemClasses.join(' ') : styles.content__item}
+          >
             {typeof tab.content === 'string' ? <p className={styles.content__text}>{tab.content}</p> : tab.content}
           </div>
         ))}

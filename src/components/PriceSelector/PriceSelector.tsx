@@ -23,7 +23,7 @@ function PriceSelector({ price, zalog }: PriceSelectorProps) {
         <p className={styles.tarif__title}>Дней аренды</p>
         <div className={styles.buttons}>
           {buttons.map((btn) => (
-            <PriceSelectorButton days={btn} isActive={btn === selected} onClick={() => setSelected(btn)} />
+            <PriceSelectorButton key={btn} days={btn} isActive={btn === selected} onClick={() => setSelected(btn)} />
           ))}
         </div>
       </div>
