@@ -1,11 +1,27 @@
 interface IFormValues {
+  tool?: string
   name: string
   phone: string
+  date?: string
+  days?: number
+  delivery?: string
+  address?: string
+  price?: number
+  pricePerDay?: number
+  zalog?: number
 }
 
 const translateMap = {
+  tool: '<b>Инструмент: </b>',
   name: '<b>Имя: </b>',
   phone: '<b>Номер телефона: </b>',
+  date: '<b>Дата начала аренды: </b>',
+  days: '<b>Дней аренды: </b>',
+  delivery: '<b>Доставка: </b>',
+  address: '<b>Адресс доставки: </b>',
+  price: '<b>Стоимость аренды: </b>',
+  pricePerDay: '<b>Цена в день: </b>',
+  zalog: '<b>Сумма залога: </b>',
 }
 
 export function generateStringMessage(formValues: IFormValues, title = 'Заявка с сайта'): string {
@@ -25,5 +41,6 @@ export function generateStringMessage(formValues: IFormValues, title = 'Заяв
         }
       })
       .join('%0A')
+      .replaceAll('/n', '')
   )
 }

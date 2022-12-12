@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Tool } from '../../models/tools'
+import OrderForm from '../Forms/OrderForm/OrderForm'
 import PriceSelector from '../PriceSelector/PriceSelector'
 import Button from '../UI/Button/Button'
 import Popup from '../UI/popup/Popup'
@@ -23,7 +24,7 @@ function ToolOrder({ tool }: ToolOrderProps) {
         <img src={tool.toolImgSrc} alt={tool.toolName} />
       </div>
       <Popup open={showPopup} onClose={() => setShowPopup(false)}>
-        <p>asd</p>
+        <OrderForm tool={tool} />
       </Popup>
     </section>
   )
