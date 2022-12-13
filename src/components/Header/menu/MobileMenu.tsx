@@ -19,6 +19,7 @@ function MobileMenu() {
         className={styles['mobile-menu-icon']}
         icon={showMenu ? faClose : faBars}
         onClick={() => setShowMenu(!showMenu)}
+        aria-label={showMenu ? 'Закрыть меню' : 'Открыть меню'}
       />
 
       <ul className={listClassNames.map((name) => styles[name]).join(' ')}>
