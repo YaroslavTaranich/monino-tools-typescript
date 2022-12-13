@@ -13,6 +13,8 @@ export interface Tool {
   toolUrl: string
   toolImgSrc: string
   popular: 1 | 0
+  htmlTitle: string
+  htmlDiscription: string
 }
 
 export interface ISpecification {

@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { Helmet } from 'react-helmet'
 import { faGear, faMessage } from '@fortawesome/free-solid-svg-icons'
 
 import Container from '../components/Container/Container'
@@ -24,6 +25,11 @@ function ToolPage({ tool }: ToolPageProps) {
 
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{tool.htmlTitle}</title>
+        <meta name="description" content={tool.htmlDiscription} />
+      </Helmet>
       <PageTitle>{tool.toolName}</PageTitle>
       <ToolOrder tool={tool} />
       <Tabs tabs={tabs} />

@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import Container from '../components/Container/Container'
 import ToolsList from '../components/ToolsList/ToolsList'
 import PageTitle from '../components/UI/PageTitle/PageTitle'
@@ -14,6 +16,11 @@ function CategoryPage({ category }: CategoryPageProps) {
 
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{category.htmlTitle}</title>
+        <meta name="description" content={category.htmlDiscription} />
+      </Helmet>
       <PageTitle>{category.name}</PageTitle>
       {toolsInCategory && <ToolsList data={toolsInCategory} />}
     </Container>
