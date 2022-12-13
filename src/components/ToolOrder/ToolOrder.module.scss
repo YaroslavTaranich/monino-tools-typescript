@@ -4,13 +4,13 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 1rem 2rem 5rem rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(107deg, var(--card-bg-hover) 50%, transparent 50%), url(./img/bg-order.jpg);
+    background-image: linear-gradient(107deg, var(--card-bg-hover) 50%, transparent 50%), url(./img/bg-order-min.jpg);
     background-size: cover;
     border-radius: 3px;
 
     @media screen and (max-width: 650px) {
         flex-direction: column-reverse;
-        background-image: linear-gradient(163deg, transparent 40%, var(--card-bg-hover) 40%), url(./img/bg-order.jpg);
+        background-image: linear-gradient(163deg, transparent 40%, var(--card-bg-hover) 40%), url(./img/bg-order-min.jpg);
         background-size: cover;
     }
 
