@@ -22,7 +22,7 @@ import styles from './OrderForm.module.scss'
 const resolver = yupResolver(schema)
 
 const defaultValues = {
-  name: 'oleg',
+  name: '',
   phone: '',
   date: new Date().toISOString().split('T')[0],
   days: 1,
@@ -165,19 +165,17 @@ function OrderForm({ tool }: IOrderFormProps) {
       <div className={styles.price}>
         <div className={styles.price__label}>Стоимость аренды:</div>
         <div className={styles.price__number}>
-          {calculatePrice(tool.price, days) * days}
-          <Rub />
+          {calculatePrice(tool.price, days) * days} <Rub />
         </div>
       </div>
       <div className={styles.price}>
         <div className={styles.price__label}>Сумма залога:</div>
         <div className={styles.price__number}>
-          {calculatePrice(tool.zalog, days)}
-          <Rub />
+          {calculatePrice(tool.zalog, days)} <Rub />
         </div>
       </div>
 
-      <Button submit style={{ margin: 20, width: '90%' }}>
+      <Button submit className={styles.form__button}>
         Отправить
       </Button>
     </form>

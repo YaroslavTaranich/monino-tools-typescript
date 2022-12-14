@@ -12,6 +12,12 @@
         padding: 0 2rem 1rem;
         color: var(--text-color);
     }
+
+    &__button {
+        display: block;
+        margin: 3rem auto 2rem;
+        width: 90%;
+    }
 }
 
 .radio {

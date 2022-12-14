@@ -9,10 +9,13 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'menu'
   icon?: IconDefinition
   submit?: boolean
+  className?: string
 }
 
-function Button({ variant, icon, submit, ...props }: ButtonProps) {
+function Button({ variant, icon, submit, className, ...props }: ButtonProps) {
   const classNames = [styles.button, styles[variant!]]
+
+  if (className) classNames.push(className)
 
   return (
     <button className={classNames.join(' ')} type={submit ? 'submit' : 'button'} {...props}>
@@ -26,6 +29,7 @@ Button.defaultProps = {
   variant: 'primary',
   icon: undefined,
   submit: false,
+  className: undefined,
 }
 
 export default Button

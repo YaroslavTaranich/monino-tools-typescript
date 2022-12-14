@@ -17,7 +17,7 @@
     cursor: pointer;
     padding: 1.5rem 4rem;
     border-radius: 3rem;
-    box-shadow: 0rem 1rem 3rem var(--black-medium-shadow);
+    box-shadow: 0rem .5rem 2rem var(--black-medium-shadow);
     transition: all .3s;
 
     &:hover,
@@ -26,7 +26,7 @@
         box-sizing: border-box;
         border-collapse: collapse;
         transform: translateY(-2px);
-        box-shadow: 0rem 1rem 3rem var(--black-dark-shadow);
+        box-shadow: 0rem .5rem 2rem var(--black-dark-shadow);
     }
 
     &:active {
