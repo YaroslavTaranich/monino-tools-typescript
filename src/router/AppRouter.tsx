@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
 
-import AboutPage from '../Pages/AboutPage'
-import CategoryPage from '../Pages/CategoryPage'
-import DeliveryPage from '../Pages/DeliveryPage'
-import ErrorPage from '../Pages/ErrorPage'
-import MainPage from '../Pages/MainPage'
-import RentTermsPage from '../Pages/RentTermsPage'
-import SearchResultPage from '../Pages/SearchResultPage'
-import ToolPage from '../Pages/ToolPage'
+import {
+  AboutPage,
+  CategoryPage,
+  DeliveryPage,
+  ErrorPage,
+  MainPage,
+  RentTermsPage,
+  SearchResultPage,
+  ToolPage,
+} from '../Pages'
 import { useAppSelector } from '../redux/hooks'
 import { selectAllCategory } from '../redux/slices/categorySlice'
 import { selectAllTools } from '../redux/slices/toolsSlice'
