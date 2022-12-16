@@ -36,7 +36,7 @@
   overflow: visible;
   background-color: var(--bg-color);
   z-index: 3;
-  padding: 30px 10px 10px;
+  padding: 20px 10px 10px;
   min-width: 250px;
   max-width: 98%;
   min-height: 200px;
