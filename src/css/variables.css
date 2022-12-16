@@ -8,6 +8,7 @@
   --text-color-primary: #333;
 
   --bg-header: rgb(251, 244, 235);
+  --bg-transparent: rgba(251, 244, 235, 0.85);
   --bg-color: #f8f8f8;
 
   --modile-menu-bg: #58595bd7;

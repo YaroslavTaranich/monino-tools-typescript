@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    background: url('./img/delivery.jpg') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    gap: 5rem;
+
+    @media screen and (max-width: 650px) {
+        padding: 2rem;
+    }
+}
+
+.price {
+    background-color: var(--bg-transparent);
+    width: 65%;
+    align-self: flex-end;
+    border-radius: 3px;
+    overflow: hidden;
+
+    & p,
+    & li {
+        font-size: 2rem;
+        margin-bottom: 0rem;
+        padding: 1rem 2rem;
+        padding-bottom: 0;
+    }
+
+    & ul {
+        font-weight: 600;
+        margin: 2rem;
+    }
+
+    @media screen and (max-width: 750px) {
+        width: 100%;
+    }
+}
